@@ -11,7 +11,7 @@ CREATE TABLE plants (
 
 CREATE TABLE decks (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  player TEXT,
+  deck TEXT,
   colors VARCHAR(5),
   format TEXT,
   rank INT
