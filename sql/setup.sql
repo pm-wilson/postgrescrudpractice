@@ -22,6 +22,6 @@ CREATE TABLE shoes (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   shoe TEXT,
   brand TEXT,
-  miles VARCHAR(5),
+  miles INT,
   for_trails BOOLEAN
 );
