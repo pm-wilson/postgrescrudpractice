@@ -1,4 +1,8 @@
 DROP TABLE IF EXISTS plants;
+DROP TABLE IF EXISTS decks;
+DROP TABLE IF EXISTS shoes;
+DROP TABLE IF EXISTS bikes;
+DROP TABLE IF EXISTS medals;
 
 CREATE TABLE plants (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -6,4 +10,36 @@ CREATE TABLE plants (
   category TEXT NOT NULL,
   water_freq INT,
   plant_description TEXT
+);
+
+CREATE TABLE decks (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  deck TEXT,
+  colors VARCHAR(5),
+  format TEXT,
+  rank INT
+);
+
+CREATE TABLE shoes (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  shoe TEXT,
+  brand TEXT,
+  miles INT,
+  for_trails BOOLEAN
+);
+
+CREATE TABLE bikes (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  bike TEXT,
+  brand TEXT,
+  miles INT,
+  color TEXT
+);
+
+CREATE TABLE medals (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  race TEXT,
+  year INT,
+  miles INT,
+  on_road BOOLEAN
 );
