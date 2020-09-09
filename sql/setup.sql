@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS plants;
 DROP TABLE IF EXISTS decks;
+DROP TABLE IF EXISTS shoes;
 
 CREATE TABLE plants (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -15,4 +16,12 @@ CREATE TABLE decks (
   colors VARCHAR(5),
   format TEXT,
   rank INT
-)
+);
+
+CREATE TABLE shoes (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  shoe TEXT,
+  brand TEXT,
+  miles VARCHAR(5),
+  for_trails BOOLEAN
+);
